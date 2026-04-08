@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style/style.css">
+  <script src="Script/script.js" defer></script>
+  <title>Frontend Mentor | Contact form</title>
+</head>
+
+<body>
+
+  <section class="container">
+    <h1>
+      Contact Us
+    </h1>
+
+    <form class="form">
+
+
+      <div class="full-name">
+        <div class="input-box">
+          <label for="first-name" class="name">First Name *</label>
+          <input type="text" name="firstName" placeholder="First name" autocomplete="given-name" id="first-name">
+          <span class="empty" hidden>This field is required</span><!-- a mettre dans js -->
+        </div>
+
+        <div class="input-box">
+          <label for="last-name" class="name">Last Name *</label>
+          <input type="text" name="lastName" placeholder="Last Name" autocomplete="family-name" id="last-name">
+          <span class="empty" hidden>This field is required</span>
+        </div>
+      </div>
+      <div class="input-box">
+        <label for="email">Email Address *</label>
+        <input type="email" name="email" placeholder="Email Address" autocapitalize="email" id="email">
+        <span class="empty" hidden>Please enter a valid email address</span>
+        <!-- <span hidden>This field is required</span>  a mettre dans js -->
+      </div>
+
+      <div class="input-box box-type">
+        <fieldset>
+          <legend>Query Type *</legend>
+          <div class="query-type">
+            <div class="row-box">
+              <label class="box-radio">
+                <input type="radio" name="query-type" class="in-radio" id="general">
+                <span>General Enquiry</span>
+              </label>
+              <label class="box-radio">
+                <input type="radio" name="query-type" class="in-radio" id="support">
+                <span>Support Request</span>
+              </label>
+            </div>
+            <span id="error-radio" class="empty" hidden> Please select a query type</span> <!-- a mettre dans js -->
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="input-box input-message">
+        <label for="message">Message *
+        </label>
+        <textarea rows="5" name="message" placeholder="Your Message" class="message" id="message"></textarea>
+        <span class="empty" hidden>This field is required</span> <!-- a mettre dans js -->
+      </div>
+
+      <div class="check-consent">
+        <input type="checkbox" name="consent" id="consent">
+        <label for="consent">I consent to being contacted by the team *</label>
+        <span class="empty" hidden>To submit this form, please consent to being contacted</span>
+        <!--  a mettre dans js-->
+      </div>
+
+      <button type="submit" class="btn-submit">Submit</button>
+
+
+    </form>
+  </section>
+
+</body>
+
+</html>
+
+<!-- Message Sent!
+  Thanks for completing the form. We'll be in touch soon! -->
+
+<!-- <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </footer> -->
