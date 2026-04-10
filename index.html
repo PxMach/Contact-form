@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <script src="https://kit.fontawesome.com/1edad1629d.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style/style.css">
   <script src="Script/script.js" defer></script>
   <title>Frontend Mentor | Contact form</title>
@@ -37,7 +38,6 @@
         <label for="email">Email Address *</label>
         <input type="email" name="email" placeholder="Email Address" autocapitalize="email" id="email">
         <span class="empty" hidden>Please enter a valid email address</span>
-        <!-- <span hidden>This field is required</span>  a mettre dans js -->
       </div>
 
       <div class="input-box box-type">
@@ -54,7 +54,7 @@
                 <span>Support Request</span>
               </label>
             </div>
-            <span id="error-radio" class="empty" hidden> Please select a query type</span> <!-- a mettre dans js -->
+            <span id="error-radio" class="empty" hidden> Please select a query type</span>
           </div>
         </fieldset>
       </div>
@@ -63,7 +63,7 @@
         <label for="message">Message *
         </label>
         <textarea rows="5" name="message" placeholder="Your Message" class="message" id="message"></textarea>
-        <span class="empty" hidden>This field is required</span> <!-- a mettre dans js -->
+        <span class="empty" hidden>This field is required</span>
       </div>
 
       <div class="check-consent">
@@ -72,7 +72,7 @@
           <label for="consent">I consent to being contacted by the team *</label>
         </div>
         <span class="empty" id="erro-consent" hidden>To submit this form, please consent to being contacted</span>
-        <!--  a mettre dans js-->
+
       </div>
 
       <button type="submit" class="btn-submit">Submit</button>
@@ -80,14 +80,18 @@
 
     </form>
   </section>
-  
+
+  <div class="box-sucess" id="success" hidden>
+    <div class="box-message">
+      <i class="fa-regular fa-circle-check"></i>
+      <h3> Message Sent!</h3>
+    </div>
+    <p> Thanks for completing the form. We'll be in touch soon!</p>
+  </div>
 
 </body>
 
 </html>
-
-<!-- Message Sent!
-  Thanks for completing the form. We'll be in touch soon! -->
 
 <!-- <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.

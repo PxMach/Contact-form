@@ -17,6 +17,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: hsl(148, 38%, 91%);
+    position: relative;
 }
 
 .container {
@@ -210,4 +211,20 @@ input[type="checkbox"] {
 
 .btn-submit:hover {
     background-color: hsl(189, 24%, 23%);
+}
+
+.box-sucess {
+    position: absolute;
+    top: 20px;
+    padding: 1.1rem;
+    border-radius: 10px;
+    background-color: hsl(187, 24%, 22%);
+    color: #eeebeb;
+}
+
+.box-message {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin-bottom: 1rem;
 }
