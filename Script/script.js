@@ -3,6 +3,9 @@ const form = document.querySelector(".form");
 form.addEventListener("submit", function (e) {
   e.preventDefault(); // on bloque l'envoi pour tester
 
+  let isValid = true;
+  let isChecked = false;
+
   // Input Full Name
   const inputs = document.querySelectorAll("input[type='text']");
 
@@ -11,6 +14,7 @@ form.addEventListener("submit", function (e) {
 
     if (!input.value.trim()) {
       error.hidden = false;
+      isValid = false;
     } else {
       error.hidden = true;
     }
@@ -23,26 +27,20 @@ form.addEventListener("submit", function (e) {
 
   if (!inputEmail.value.trim()) {
     errorEmail.hidden = false;
+    isValid = false;
   } else {
     errorEmail.hidden = true;
   }
 
   // Input Radio
-  const inputsRadio = document.querySelectorAll("input[name='query-type']");
+  const radioChecked = document.querySelector(
+    "input[name='query-type']:checked",
+  );
   const errorRadio = document.getElementById("error-radio");
 
-  let isChecked = false;
-
-  inputsRadio.forEach(function (radio) {
-    if (radio.checked) {
-      isChecked = true;
-    } else {
-      isChecked = false;
-    }
-  });
-
-  if (!isChecked) {
+  if (!radioChecked) {
     errorRadio.hidden = false;
+    isValid = false;
   } else {
     errorRadio.hidden = true;
   }
@@ -53,6 +51,7 @@ form.addEventListener("submit", function (e) {
 
   if (!textArea.value.trim()) {
     errorText.hidden = false;
+    isValid = false;
   } else {
     errorText.hidden = true;
   }
@@ -63,7 +62,19 @@ form.addEventListener("submit", function (e) {
 
   if (!inputCheck.checked) {
     errorCheck.hidden = false;
+    isValid = false;
   } else {
     errorCheck.hidden = true;
+  }
+
+  const success = document.getElementById("success");
+
+  if (isValid) {
+    success.hidden = false;
+    form.reset();
+
+    setTimeout(function () {
+      success.hidden = true;
+    }, 2000);
   }
 });

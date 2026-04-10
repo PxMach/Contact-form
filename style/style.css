@@ -213,6 +213,7 @@ input[type="checkbox"] {
     background-color: hsl(189, 24%, 23%);
 }
 
+/* BOX Success */
 .box-sucess {
     position: absolute;
     top: 20px;
