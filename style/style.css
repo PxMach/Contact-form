@@ -175,9 +175,15 @@ fieldset legend {
 /* check-consent */
 
 .check-consent {
-    display: flex;
     margin: 1rem 0;
     gap: 1rem;
+}
+
+.box-consent {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: .3rem;
 }
 
 .check-consent label {

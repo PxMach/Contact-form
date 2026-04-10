@@ -3,6 +3,7 @@ const form = document.querySelector(".form");
 form.addEventListener("submit", function (e) {
   e.preventDefault(); // on bloque l'envoi pour tester
 
+  // Input Full Name
   const inputs = document.querySelectorAll("input[type='text']");
 
   inputs.forEach(function (input) {
@@ -15,6 +16,7 @@ form.addEventListener("submit", function (e) {
     }
   });
 
+  // Input Email
   const inputEmail = document.querySelector("input[type='email']");
 
   const errorEmail = inputEmail.nextElementSibling;
@@ -25,6 +27,7 @@ form.addEventListener("submit", function (e) {
     errorEmail.hidden = true;
   }
 
+  // Input Radio
   const inputsRadio = document.querySelectorAll("input[name='query-type']");
   const errorRadio = document.getElementById("error-radio");
 
@@ -33,9 +36,8 @@ form.addEventListener("submit", function (e) {
   inputsRadio.forEach(function (radio) {
     if (radio.checked) {
       isChecked = true;
-      console.log("ok");
     } else {
-      console.log("no ok");
+      isChecked = false;
     }
   });
 
@@ -43,5 +45,25 @@ form.addEventListener("submit", function (e) {
     errorRadio.hidden = false;
   } else {
     errorRadio.hidden = true;
+  }
+
+  // Texte area
+  const textArea = document.getElementById("message");
+  const errorText = textArea.nextElementSibling;
+
+  if (!textArea.value.trim()) {
+    errorText.hidden = false;
+  } else {
+    errorText.hidden = true;
+  }
+
+  // Check Consent
+  const inputCheck = document.getElementById("consent");
+  const errorCheck = document.getElementById("erro-consent");
+
+  if (!inputCheck.checked) {
+    errorCheck.hidden = false;
+  } else {
+    errorCheck.hidden = true;
   }
 });
